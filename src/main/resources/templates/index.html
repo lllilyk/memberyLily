@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>bxslider</title>
+        <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+   
+        <script>
+            $(document).ready(function(){
+             $('.slider').bxSlider();
+            });
+        </script>
+    </head>
+    <body>
+        <div class="slider">
+            <div><img src="petplanet1.png" alt=""></div>
+            <div><img src="petplanet2.png" alt=""></div>
+            <div><img src="petplanet3.png" alt=""></div>
+            <div><img src="petplanet4.png" alt=""></div>
+        </div>
+        <style>
+            .slider {text-align:center;} 
+            .slider img { display:block; width:550px; margin:auto}
+            .bx-wrapper { position:relative;}
+            .bx-controls-direction { font-size:100px;}
+            .bx-controls-direction a { position:absolute; display:block; width:100px; 
+            height:110px; overflow:hidden; transform:translateY(-280%); color:#5a5a5a; font-weight:normal;}
+            .bx-controls-direction .bx-prev {left:0;}
+            .bx-controls-direction .bx-next {right:0;}
+            .bx-controls-direction .bx-prev:before { content:"\e93d"; font-family:'xeicon';}
+            .bx-controls-direction .bx-next:before { content:"\e940"; font-family:'xeicon';}
+            .bx-pager { position:absolute; left:0; bottom: -37px; width:100%; text-align: center;}
+            .bx-pager div { display:inline-block; padding:0 5px; }
+            .bx-pager div a { display:block; color:transparent; width:24px; height: 3px;
+            background: #999; font-size:0;}
+            .bx-pager div a.active {background: #000;}
+        </style>
+
+    </body>
+</html>
