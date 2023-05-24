@@ -19,7 +19,7 @@
 <style>
 .slider {
 	position: relative;
-	top: 160px;
+	top: 200px;
 }
 
 .slider img {
