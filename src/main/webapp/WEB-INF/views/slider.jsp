@@ -99,6 +99,10 @@
 			<li><img src="img/petplanet2.png" alt="사진2"></li>
 			<li><img src="img/petplanet3.png" alt="사진3"></li>
 			<li><img src="img/petplanet4.png" alt="사진4"></li>
+			<li><img src="img/petplanet5.png" alt="사진5"></li>
+			<li><img src="img/petplanet6.png" alt="사진6"></li>
+			<li><img src="img/petplanet7.png" alt="사진7"></li>
+			<li><img src="img/petplanet8.png" alt="사진8"></li>
 		</ul>
 	</div>
 
