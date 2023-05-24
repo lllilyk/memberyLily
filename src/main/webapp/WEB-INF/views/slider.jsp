@@ -18,7 +18,8 @@
 
 <style>
 .slider {
-	text-align: center;
+	position: relative;
+	top: 160px;
 }
 
 .slider img {
