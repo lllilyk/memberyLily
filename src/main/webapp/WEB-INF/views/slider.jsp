@@ -17,9 +17,60 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <style>
+/* 서치 바 */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	width: 300px;
+}
+
+.searchBar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 35vh;
+	text-align: center;
+}
+
+.container {
+	padding: 100px 50px;
+}
+
+.input-box {
+	display: flex;
+	margin: auto;
+	width: 400px;
+	padding: 6px;
+	border-radius: 15px;
+	border: 1px solid #e2e2e2;
+}
+
+.input-box i {
+	flex: 1;
+}
+
+.input-box input {
+	flex: 7;
+	border: none;
+	outline: none;
+}
+
+button {
+	margin-bottom: 15px;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+/* 슬라이더 */
 .slider {
 	position: relative;
-	top: 230px;
+	top: 30px;
 }
 
 .slider img {
@@ -93,6 +144,22 @@
 </style>
 </head>
 <body>
+	<div class="searchBar">
+		<div class="container">
+
+			<img src="/img/MemberyLogo.png" alt="Membery logo">
+
+			<div class="input-box">
+				<i class="fa-solid i1 fa-magnifying-glass"></i> <input type="text"> <i class="fa-solid fa-keyboard"></i> <i class="fa-solid fa-microphone"></i>
+			</div>
+
+			<div class="btn-box">
+				<button>어디에 사시나요?</button>
+				<button>언제 맡기시나요?</button>
+			</div>
+
+		</div>
+	</div>
 
 	<div class="slider">
 		<ul class="slide_gallery">
