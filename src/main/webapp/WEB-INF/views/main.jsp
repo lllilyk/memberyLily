@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="jakarta.tags.core"%>
+<%@ taglib prefix="my" tagdir="/WEB-INF/tags"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -144,6 +145,9 @@ button {
 </style>
 </head>
 <body>
+
+	<my:navBar />
+	
 	<div class="searchBar">
 		<div class="container">
 
