@@ -33,7 +33,7 @@ img {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 35vh;
+	height: 23vh;
 	text-align: center;
 }
 
@@ -146,7 +146,9 @@ button {
 </head>
 <body>
 
-	<my:navBar />
+	<my:navBar current="main" />
+
+	<my:alert></my:alert>
 	
 	<div class="searchBar">
 		<div class="container">

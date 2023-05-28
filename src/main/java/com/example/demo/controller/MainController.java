@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("/")
-public class SliderController {
+public class MainController {
 	
 	@GetMapping("main")
 	public void slider() {
