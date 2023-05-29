@@ -27,3 +27,9 @@ CREATE TABLE bookDate (
 DESC Member;
 select * from Member;
 
+SELECT * FROM Member;
+
+DESC Member; 
+alter table Member drop inserted;
+alter table Member change id id VARCHAR(12);
+alter table Member add inserted DATETIME DEFAULT NOW();

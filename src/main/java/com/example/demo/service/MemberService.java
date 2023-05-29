@@ -5,6 +5,7 @@ import java.util.*;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.stereotype.*;
 import org.springframework.transaction.annotation.*;
+import org.springframework.web.servlet.mvc.support.*;
 
 import com.example.demo.domain.*;
 import com.example.demo.mapper.*;
@@ -28,6 +29,31 @@ public class MemberService {
 
 	public Member get(String id) {
 		return mapper.selectById(id);
+	}
+
+	public boolean remove(Member member) {
+		Member eachMemberId = mapper.selectById(member.getId());
+		int cnt = 0;
+		if(eachMemberId.getPassword().equals(member.getPassword())) {
+			// 암호가 같으면?
+			cnt = mapper.deleteById(member.getId());			
+		
+		} 
+		
+		return cnt == 1;
+		
+	}
+
+	public boolean modify(Member member, String oldPassword) {
+		Member oldMember = mapper.selectById(member.getId());
+		
+		int cnt = 0;
+		if(oldMember.getPassword().equals(oldPassword)) {			
+			
+			cnt = mapper.update(member);
+		}
+		
+		return cnt == 1;
 	}
 	
 }

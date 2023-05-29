@@ -23,27 +23,27 @@
 				<form method="post">
 					<div class="mb-3">
 						<label for="inputId" class="form-label">아이디</label>
-						<input type="inputId"" type="text" class="form-control" name="id" value="${member.id }"/>
+						<input id="inputId"" type="text" class="form-control" name="id" value="${member.id }"/>
 					</div>
 					<div class="mb-3">
 						<label for="inputName" class="form-label">이름</label>
-						<input type="inputName"" type="text" class="form-control" name="name" value="${member.name }"/>
+						<input id="inputName"" type="text" class="form-control" name="name" value="${member.name }"/>
 					</div>
 					<div class="mb-3">
 						<label for="inputPassword" class="form-label">패스워드</label>
-						<input type="inputPassword" type="password" class="form-control" name="password" />
+						<input id="inputPassword" type="password" class="form-control" name="password" />
 					</div>
 					<div class="mb-3">
 						<label for="inputNickName" class="form-label">닉네임</label>
-						<input type="inputNickName" type="text" class="form-control" name="nickName" value="${member.nickName }"/>
+						<input id="inputNickName" type="text" class="form-control" name="nickName" value="${member.nickName }"/>
 					</div>
 					<div class="mb-3">
 						<label for="inputEmail" class="form-label">이메일</label>
-						<input type="inputEmail" type="email" class="form-control" name="email" value="${member.email }"/>
+						<input id="inputEmail" type="email" class="form-control" name="email" value="${member.email }"/>
 					</div>
 					<div class="mb-3">
 						<label for="inputPhoneNumber" class="form-label">연락처</label>
-						<input type="inputPhoneNumber" type="text" class="form-control" name="phoneNumber" value="${member.phoneNumber }"/>
+						<input id="inputPhoneNumber" type="text" class="form-control" name="phoneNumber" value="${member.phoneNumber }"/>
 					</div>
 					<div class="mb-3">
 						<input type="submit" class="btn btn-primary" value="가입"/>
