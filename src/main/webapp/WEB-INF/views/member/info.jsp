@@ -8,6 +8,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MemberInfo</title>
+
+<style>
+.container{
+	display: flex;
+	height: 2vh;
+	justify-content: center;
+	align-items: center;
+}
+</style>
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
@@ -18,27 +28,34 @@
 
 	<my:alert></my:alert>
 
-	<div class="container-lg">
+	<div class="ui center aligned container" id="container">
+	
 		<div class="row justify-content-center">
-			<div class="col-12 col-md-8 col-lg-6">
-				<h1>회원 정보</h1>
-				<div class="mb-3">
-					<label class="form-label" for="">아이디</label> <input class="form-control" type="text" value="${member.id }" readonly />
+			<div class="col-12 col-md-8 ">
+				<h1 style="margin: 50px;">회원 정보</h1>
+				<div class="ui tag labels" style="margin: 0 auto; width: 500px;">
+					<label class="ui large label" for="">아이디</label> 
+						<input class="form-control" type="text" value="${member.id }" style="margin:0px 0px 10px 0px; font-size: 20px; text-align:center; " readonly />
 				</div>
-				<div class="mb-3">
-					<label class="form-label" for="">이름</label> <input class="form-control" type="text" value="${member.name }" readonly />
+				<div class="ui tag labels" style="margin: 0 auto; width: 500px;">
+					<label class="ui large label" for="">이름</label> 
+					<input class="form-control" type="text" value="${member.name }" style="margin:0px 0px 10px 0px; font-size: 20px; text-align:center; " readonly />
 				</div>
-				<div class="mb-3">
-					<label class="form-label" for="">비밀번호</label> <input class="form-control" type="password" value="${member.password }" readonly />
+				<div class="ui tag labels" style="margin: 0 auto; width: 500px;">
+					<label class="ui large label" for="">비밀번호</label> 
+					<input class="form-control" type="password" value="${member.password }" style="margin:0px 0px 10px 0px; font-size: 20px; text-align:center; " readonly />
 				</div>
-				<div class="mb-3">
-					<label class="form-label" for="">별명</label> <input class="form-control" type="text" value="${member.nickName }" readonly />
+				<div class="ui tag labels" style="margin: 0 auto; width: 500px;">
+					<label class="ui large label" for="">별명</label> 
+					<input class="form-control" type="text" value="${member.nickName }" style="margin:0px 0px 10px 0px; font-size: 20px; text-align:center; " readonly />
 				</div>
-				<div class="mb-3">
-					<label class="form-label" for="">이메일</label> <input class="form-control" type="email" value="${member.email }" readonly />
+				<div class="ui tag labels" style="margin: 0 auto; width: 500px;">
+					<label class="ui large label" for="">이메일</label> 
+					<input class="form-control" type="email" value="${member.email }" style="margin:0px 0px 10px 0px; font-size: 20px; text-align:center; " readonly />
 				</div>
-				<div class="mb-3">
-					<label class="form-label" for="">연락처</label> <input class="form-control" type="text" value="${member.phoneNumber }" readonly />
+				<div class="ui tag labels" style="margin: 0 auto; width: 500px;">
+					<label class="ui large label" for="">연락처</label> 
+					<input class="form-control" type="text" value="${member.phoneNumber }" style="margin:0px 0px 10px 0px; font-size: 20px; text-align:center; " readonly />
 				</div>
 
 				<a class="btn btn-warning" href="/member/modify?id=${member.id }">수정</a>
