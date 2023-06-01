@@ -40,6 +40,15 @@ public class customConfig {
 	}
 	
 	@Bean
+	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+		http.csrf().disable(); 
+		http.authorizeHttpRequests().anyRequest().permitAll();
+		http.formLogin().loginPage("/member/login");
+		http.logout().logoutUrl("/member/logout");
+		return http.build();
+	}
+	
+	@Bean
 	public S3Client s3client() {
 		
 		AwsBasicCredentials credentials 
@@ -55,12 +64,5 @@ public class customConfig {
 		return s3client;
 	}
 	
-	@Bean
-	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-		http.csrf().disable(); 
-		http.authorizeHttpRequests().anyRequest().permitAll();
-		
-		return http.build();
-	}
 	
 }

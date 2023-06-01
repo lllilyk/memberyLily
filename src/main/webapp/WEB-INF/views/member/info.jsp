@@ -32,7 +32,7 @@
 	
 		<div class="row justify-content-center">
 			<div class="col-12 col-md-8 ">
-				<h1 style="margin: 50px;">회원 정보</h1>
+				<h1 style="margin: 50px 0px 20px 0px;">회원 정보</h1>
 				<div class="ui tag labels" style="margin: 0 auto; width: 500px;">
 					<label class="ui large label" for="">아이디</label> 
 						<input class="form-control" type="text" value="${member.id }" style="margin:0px 0px 10px 0px; font-size: 20px; text-align:center; " readonly />
