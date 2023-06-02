@@ -64,13 +64,12 @@
 			</div>
 		</div>
 
-
-	<div id="buttons">
-		<a class="btn btn-warning" href="/member/modify?id=${member.id }" style="margin: 15px; font-size: 18px;">수정</a>
-		<button type="button" data-bs-toggle="modal" class="btn btn-danger" data-bs-target="#confirmModal" style="margin: 20px; font-size: 18px;">탈퇴</button>
+		<div id="buttons">
+			<a class="btn btn-warning" href="/member/modify?id=${member.id }" style="margin: 20px; font-size: 18px;">수정</a>
+			<button type="button" data-bs-toggle="modal" class="btn btn-danger" data-bs-target="#confirmModal" style="margin: 20px; font-size: 18px;">탈퇴</button>
+		</div>
 	</div>
-
-	</div>
+	
 	<!-- 탈퇴 확인 Modal -->
 	<div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
