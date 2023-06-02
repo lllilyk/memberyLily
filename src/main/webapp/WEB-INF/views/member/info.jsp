@@ -9,8 +9,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MemberInfo</title>
 <style>
-#buttons{
-		margin:auto;
+#buttons {
+	margin: auto;
 }
 </style>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
@@ -33,53 +33,42 @@
 
 				<div class="ui fluid labeled big input mt-5">
 					<div class="ui label">아이디</div>
-					<input class="form-control" type="text" value="${member.id }" style=" font-size: 18px; text-align: center;" readonly />
+					<input class="form-control" type="text" value="${member.id }" style="font-size: 18px; text-align: center;" readonly />
 				</div>
 				<div class="ui fluid labeled big input mt-5">
 					<div class="ui label">이름</div>
-					<input class="form-control" type="text" value="${member.name }" style=" font-size: 18px; text-align: center;" readonly />
+					<input class="form-control" type="text" value="${member.name }" style="font-size: 18px; text-align: center;" readonly />
 				</div>
 				<div class="ui fluid labeled big input mt-5">
 					<div class="ui label">별명</div>
-					<input class="form-control" type="text" value="${member.nickName }" style=" font-size: 18px; text-align: center;" readonly />
+					<input class="form-control" type="text" value="${member.nickName }" style="font-size: 18px; text-align: center;" readonly />
 				</div>
 			</div>
 		</div>
 
 		<div class="eight wide column">
 			<div class="ui right aligned container" id="rightContainer">
-				<div class="ui form">
-					<div class="field">
-						<div class="ui fluid labeled big input mt-5">
-							<div class="ui label">연락처</div>
-							<input class="form-control" type="text" value="${member.phoneNumber }" style=" font-size: 18px; text-align: center;" readonly />
-						</div>
-					</div>
+
+				<div class="ui fluid labeled big input mt-5">
+					<div class="ui label">연락처</div>
+					<input class="form-control" type="text" value="${member.phoneNumber }" style="font-size: 18px; text-align: center;" readonly />
 				</div>
-			</div>
-			<div class="ui form">
-				<div class="field">
-					<div class="ui fluid labeled big input mt-5">
-						<div class="ui label">이메일</div>
-						<input class="form-control" type="email" value="${member.email }" style=" font-size: 18px; text-align: center;" readonly />
-					</div>
+				<div class="ui fluid labeled big input mt-5">
+					<div class="ui label">이메일</div>
+					<input class="form-control" type="email" value="${member.email }" style="font-size: 18px; text-align: center;" readonly />
 				</div>
-			</div>
-			<div class="ui form">
-				<div class="field">
-					<div class="ui fluid labeled big input mt-5">
-						<div class="ui label">비밀번호</div>
-						<input class="form-control" type="password" value="${member.password }" style=" font-size: 18px; text-align: center;" readonly />
-					</div>
+				<div class="ui fluid labeled big input mt-5">
+					<div class="ui label">비밀번호</div>
+					<input class="form-control" type="password" value="${member.password }" style="font-size: 18px; text-align: center;" readonly />
 				</div>
 			</div>
 		</div>
 
 
-		<div id="buttons">
-		<a class="btn btn-warning" href="/member/modify?id=${member.id }" style="margin:15px; font-size: 18px;">수정</a>
-		<button type="button" data-bs-toggle="modal" class="btn btn-danger" data-bs-target="#confirmModal" style="margin:20px; font-size: 18px;">탈퇴</button>
-		</div>
+	<div id="buttons">
+		<a class="btn btn-warning" href="/member/modify?id=${member.id }" style="margin: 15px; font-size: 18px;">수정</a>
+		<button type="button" data-bs-toggle="modal" class="btn btn-danger" data-bs-target="#confirmModal" style="margin: 20px; font-size: 18px;">탈퇴</button>
+	</div>
 
 	</div>
 	<!-- 탈퇴 확인 Modal -->
