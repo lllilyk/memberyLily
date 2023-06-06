@@ -39,7 +39,7 @@
 		<img src="/img/MemberyLogo.png" alt="" id="img" />
 		
 		<div id="button">
-		<button class="ui right labeled icon button" >
+		<button class="ui right labeled icon button" onclick="location.href='/petsitter/list'">
 			<i class="right arrow icon"></i> 전체보기
 		</button>
 		</div>
