@@ -1,16 +1,19 @@
 package com.example.demo.controller;
 
-import java.util.*;
+import java.util.Map;
 
-import org.springframework.beans.factory.annotation.*;
-import org.springframework.security.access.prepost.*;
-import org.springframework.stereotype.*;
-import org.springframework.ui.*;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.mvc.support.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.example.demo.domain.*;
-import com.example.demo.service.*;
+import com.example.demo.domain.Member;
+import com.example.demo.service.MemberService;
 
 @Controller
 @RequestMapping("member")
@@ -46,11 +49,21 @@ public class MemberController {
 		}
 	}
 
+	// 경로: http://localhost:8080/member/list?page=3
 	@GetMapping("list")
 	@PreAuthorize("isAuthenticated()")
-	public void list(Model model) {
-		List<Member> list = service.listMember();
-		model.addAttribute("memberList", list);
+	public String list(Model model, 
+					 @RequestParam(value="page", defaultValue="1") Integer page) {
+//		List<Member> list = service.listMember(); // 페이지 처리 전
+		
+		Map<String, Object> result = service.listMember(page); // 페이지 처리 이후
+		
+//		model.addAttribute("pageInfo", result.get("pageInfo"));
+//		model.addAttribute("memberList", result.get("memberList"));
+		model.addAllAttributes(result);
+		
+		
+		return "member/list";
 	}
 
 	@GetMapping("info")
