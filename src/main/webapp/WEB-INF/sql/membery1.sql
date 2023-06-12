@@ -39,4 +39,22 @@ DELETE FROM Member WHERE password="asdf asf";
 
 use membery;
 select * from Member;
-DESC Member; 
+DESC Member;
+
+SELECT * FROM Host;
+
+SELECT * FROM Book;
+
+ALTER TABLE Feed
+ADD FOREIGN KEY (writer) REFERENCES Member(id);
+
+SELECT * FROM Feed;
+USE membery;
+
+DELETE FROM Member
+WHERE id IS NULL;
+
+SELECT * FROM Member;
+DELETE FROM Member WHERE inserted = '2023-06-11 22:42:59';
+
+DESC File;
