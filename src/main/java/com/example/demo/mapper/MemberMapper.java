@@ -25,12 +25,34 @@ public interface MemberMapper {
 
 
 	@Select("""
+			SELECT m.*, ma.authority, CONCAT('/', p.id, '/', p.photo) profileImage
+			FROM Member m LEFT JOIN Pet p ON m.defaultPetId = p.id
+						  LEFT JOIN MemberAuthority ma ON m.id = ma.memberId
+			WHERE m.id = #{id}
+			""")
+	@ResultMap("memberMap")
+	Member selectById(String id);
+	
+	@Select("""
 			SELECT *
 			FROM Member
-			WHERE id = #{id}
+			WHERE nickName = #{nickName}
 			""")
-	Member selectById(String id);
+	Member selectByNickName(String nickName);
 
+	@Select("""
+			SELECT *
+			FROM Member
+			WHERE email = #{email}
+			""")
+	Member selectByEmail(String email);
+	
+	@Select("""
+			SELECT *
+			FROM Member
+			WHERE phoneNumber = #{phoneNumber}
+			""")
+	Member selectByPhoneNumber(String phoneNumber);
 
 	@Delete("""
 			DELETE FROM Member
@@ -79,5 +101,9 @@ public interface MemberMapper {
 			FROM Member
 			""")
 	Integer countAll();
+
+
+	
+	
 	
 }
